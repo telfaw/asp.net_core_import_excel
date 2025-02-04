@@ -1,0 +1,32 @@
+﻿
+@page "/importPage"
+@using Microsoft.AspNetCore.Components.Forms
+
+<h3>Import Page</h3>
+
+<EditForm Model="@uploadModel" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputFile OnChange="HandleFileSelected" />
+    <button type="submit">Upload</button>
+</EditForm>
+
+@code {
+    private UploadModel uploadModel = new UploadModel();
+
+    private void HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        // Handle file selection
+    }
+
+    private void HandleValidSubmit()
+    {
+        // Handle form submission
+    }
+
+    public class UploadModel
+    {
+        // Define properties as needed
+    }
+}
